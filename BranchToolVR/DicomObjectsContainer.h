@@ -13,6 +13,10 @@
 #include "fstream"
 #include "set"
 
+#ifdef __linux__
+#define MAX_PATH 4096 //TODO
+#endif
+
 struct IsovaluePointCloudSlider
 {
 	float curr_isovalue;

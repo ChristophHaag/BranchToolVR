@@ -3,7 +3,7 @@
 #include <GL/glew.h>
 #include <glm/gtc/matrix_access.hpp>
 #include <GLFW/glfw3.h>
-#include <GLM/glm.hpp>
+#include <glm/glm.hpp>
 #include <stdio.h>
 #include <stdlib.h>
 #include <iostream>
@@ -19,6 +19,11 @@
 #include "Constants.h"
 #include "imgui.h"
 #include "imgui_impl_glfw_gl3.h"
+
+#ifdef __linux__
+#include <unistd.h>
+#define Sleep(x) usleep((x)*1000)
+#endif
 
 class Engine
 {

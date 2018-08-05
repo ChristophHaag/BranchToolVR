@@ -26,6 +26,11 @@
 #include "Constants.h"
 #include "Curve.h"
 
+#ifdef __linux__
+#define sprintf_s snprintf
+#define _stricmp strcmp
+#endif
+
 struct Light 
 {
 	glm::vec3 position;

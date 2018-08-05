@@ -4,7 +4,7 @@
 #include <iostream>
 #include <vector>
 
-#include "GL\glew.h"
+#include "GL/glew.h"
 #include "lodepng.h"
 #include "pathtools.h"
 #include "tinydir.h"

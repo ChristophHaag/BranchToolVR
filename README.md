@@ -3,6 +3,7 @@
 A tool designed to map vascular systems present in medical images in virtual reality. The previous non-vr iteration of the tool can be found here: https://github.com/microdr/Branch-Tool
 
 ## TODO list:
+- [ ] Linux: DicomReader (project does not compile yet, contributions welcome). meson.build also incomplete (linking libraries, ...)
 - [ ] Optimization
 - [ ] Testing
 - [ ] Control adjustments for improved UX
@@ -47,9 +48,25 @@ A tool designed to map vascular systems present in medical images in virtual rea
 * tinyobjloader
 
 ## Running Solution:
+
+### Windows
+
 - Download/Clone Repository
 - Open "BranchToolVR.sln"
 - Go to Project->BranchToolVR Properties->Linker->Input and add $(ProjectDir)Libraries\glew-2.1.0\lib\Release\x64\glew32.lib
 - Go to Tools->Options->Debugging->Symbols and check Microsoft Symbol Servers
 - Change project type to Release
 - If you get errors saying "application could not be loaded", you need to copy BranchToolVR\Libraries\glew-2.1.0\bin\Release\x64\glew32.dll and BranchToolVR\Libraries\openvr-master\bin\win64\openvr_api.dll to BranchToolVR-master\x64\Release
+
+### Linux
+
+Dependencies:
+
+- /usr/include/openvr.h or add someting to include path in meson.build
+- glm
+- ???
+
+```
+meson build
+ninja -C build
+```

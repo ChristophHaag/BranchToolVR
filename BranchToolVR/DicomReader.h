@@ -1,8 +1,8 @@
 #pragma once
 
 #include <future>
-#include <windows.h>
-#include <Windows.h>
+//#include <windows.h>
+//#include <Windows.h>
 #include <thread>
 #include <string>
 #include <iostream>
@@ -14,6 +14,8 @@
 
 #include "Constants.h"
 #include "MiscFunctions.h"
+
+#include <algorithm>
 
 struct DicomSingle 
 {
